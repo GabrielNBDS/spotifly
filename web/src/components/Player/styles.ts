@@ -26,10 +26,8 @@ export const PlayerContainer = styled.div`
       margin-right: 15px;
     }
   }
-`;
 
-export const PlayerPart = styled.div`
-  p {
-    color: white
+  .audiocontainer {
+    width: 100%;
   }
 `;
