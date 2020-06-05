@@ -10,7 +10,7 @@ const Player = () => {
   const [song, setSong] = useState('');
 
   useEffect(() => {
-    setSong(songContext.song);
+    setSong(songContext.song.song_url);
 
   }, [song, songContext.song])
 
