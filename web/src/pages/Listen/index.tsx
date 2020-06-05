@@ -61,17 +61,22 @@ const Listen = () => {
             </div>
           </Search>
 
-          {songs.map(song => (
-              <SongBox key={song.id}>
-                <button onClick={()=> songContext.setCurrentSong(song.song_url)}>
+          {songs.map(song => {
+            const { id, author, song: songName } = song;
+
+            return (
+              <SongBox key={id}>
+                <button 
+                  onClick={()=> songContext.setCurrentSong(song)}
+                >
                   <FiPlayCircle size={48} color={'#000'} />
                 </button>
                 <div>
-                  <h1>{song.song}</h1>
-                  <h2>{song.author}</h2>
+                  <h1>{songName}</h1>
+                  <h2>{author}</h2>
                 </div>
               </SongBox>
-          ))}
+          )})}
 
         </Container>
       </ListenDiv>
