@@ -27,3 +27,9 @@ export const PlayerContainer = styled.div`
     }
   }
 `;
+
+export const PlayerPart = styled.div`
+  p {
+    color: white
+  }
+`;
