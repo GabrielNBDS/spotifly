@@ -1,17 +1,23 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
 
 interface SongData {
-  setCurrentSong(url: string): void;
+  setCurrentSong(data: Song): void;
+  song: Song;
+}
+
+interface Song {
+  author: string;
   song: string;
+  song_url: string;
 }
 
 const SongContext = createContext<SongData>({} as SongData);
 
 const SongProvider: React.FC = ({ children }) => {
-  const [song, setSong] = useState('');
+  const [song, setSong] = useState<Song>({} as Song);
 
-  const setCurrentSong = useCallback((url:string) => {
-      setSong(url);
+  const setCurrentSong = useCallback(({author, song, song_url}: Song) => {
+      setSong({author, song, song_url});
     },
   [],);
 
