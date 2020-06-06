@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import { FiSearch, FiPlayCircle } from 'react-icons/fi';
+import { GiSoundOn } from 'react-icons/gi';
 
 import api from '../../services/api';
 import { useSong } from '../../hooks/song';
@@ -69,7 +70,10 @@ const Listen = () => {
                 <button 
                   onClick={()=> songContext.setCurrentSong(song)}
                 >
-                  <FiPlayCircle size={48} color={'#000'} />
+                  {songContext.song.song === songName 
+                    ? <GiSoundOn size={48} color={'#000'} />
+                    : <FiPlayCircle size={48} color={'#000'} />
+                  } 
                 </button>
                 <div>
                   <h1>{songName}</h1>

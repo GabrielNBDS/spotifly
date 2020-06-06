@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from 'react';
 
 import { useSong } from '../../hooks/song';
-import { PlayerDiv, PlayerContainer} from './styles';
-//import AudioPlayer from 'react-modular-audio-player';
-//<AudioPlayer controls src={song} autoPlay className='audiocontainer'/>
+import { PlayerDiv, PlayerContainer } from './styles';
 
 const Player = () => {
-  const songContext = useSong();
+  const songContext = useSong()
 
   const [song, setSong] = useState('');
 
   useEffect(() => {
     setSong(songContext.song.song_url);
-  }, [song, songContext.song]);
+
+  }, [song, songContext.song])
 
   return (
-    <PlayerDiv>
-      <PlayerContainer>
-        
-      </PlayerContainer>
-    </PlayerDiv>
+  <PlayerDiv>
+    <PlayerContainer>
+      <audio controls src={song} autoPlay style={{width: '100%'}} />
+    </PlayerContainer>
+  </PlayerDiv>
   
   )
 }
