@@ -26,4 +26,8 @@ export const PlayerContainer = styled.div`
       margin-right: 15px;
     }
   }
+
+  .audiocontainer {
+    width: 100%;
+  }
 `;
