@@ -16,7 +16,6 @@ export const PlayerContainer = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   div {
     display: flex;
@@ -26,8 +25,90 @@ export const PlayerContainer = styled.div`
       margin-right: 15px;
     }
   }
+`;
 
-  .audiocontainer {
+export const Time = styled.span`
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+`;
+
+export const SliderContainer = styled.div`
+  width: 50vh;
+
+  .myslider {
+    appearance: none;
     width: 100%;
+    height: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: white;
+      cursor: pointer;
+    }
+  }
+`;
+
+export const PlayerControls = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    background: transparent;
+    border: none;
+  }
+`;
+
+export const VolumeControl = styled.div`
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .volumeslider {
+    appearance: none;
+    width: 80%;
+    height: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: white;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: white;
+      cursor: pointer;
+    }
   }
 `;
