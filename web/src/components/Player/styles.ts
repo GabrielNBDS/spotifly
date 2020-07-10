@@ -3,14 +3,17 @@ import styled from 'styled-components';
 export const PlayerDiv = styled.div`
   width: 100%;
   height: 10vh;
+  align-items: center;
+  justify-content: center;
 
   background: #000;
 `;
 
 export const PlayerContainer = styled.div`
   width: 100%;
-  max-width: 1000px;
   margin: 0 auto;
+  max-width: 1000px;
+  
 
   height: 100%;
 
@@ -29,12 +32,24 @@ export const PlayerContainer = styled.div`
 
 export const Time = styled.span`
   color: white;
+  text-align: left;
+  width: 60px;
   font-size: 20px;
   margin: 20px;
 `;
 
 export const SliderContainer = styled.div`
-  width: 50vh;
+  width: 750px;
+
+  @media(max-width: 1300px) {
+    max-width: 500px;
+  }
+  @media(max-width: 900px) {
+    max-width: 300px;
+  }
+  @media(max-width: 650px) {
+    max-width: 80px;
+  }
 
   .myslider {
     appearance: none;
@@ -85,7 +100,7 @@ export const VolumeControl = styled.div`
 
   .volumeslider {
     appearance: none;
-    width: 80%;
+    width: 100%;
     height: 5px;
     outline: none;
     opacity: 0.7;
